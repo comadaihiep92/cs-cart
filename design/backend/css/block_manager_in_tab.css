@@ -1,0 +1,12 @@
+.container .block {
+    cursor: inherit !important;
+}
+
+.container .ui-draggable-block {
+    cursor: inherit !important;
+}
+
+.grid .grid-control-menu {
+    cursor: inherit !important;
+}
+

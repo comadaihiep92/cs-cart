@@ -1,0 +1,1 @@
+O:8:"stdClass":7:{s:6:"parent";N;s:4:"type";s:4:"root";s:2:"id";i:13;s:8:"isVararg";b:0;s:4:"tags";N;s:5:"props";a:2:{i:0;a:4:{i:0;s:6:"assign";i:1;s:10:"@mainColor";i:2;a:2:{i:0;s:9:"raw_color";i:1;s:7:"#258d78";}i:-1;i:1;}i:1;a:4:{i:0;s:6:"assign";i:1;s:31:"@topPanelMenuBackgroundDisabled";i:2;a:2:{i:0;s:9:"raw_color";i:1;s:7:"#526f6a";}i:-1;i:22;}}s:8:"children";a:0:{}}
