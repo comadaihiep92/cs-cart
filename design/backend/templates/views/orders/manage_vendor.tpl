@@ -18,11 +18,11 @@
     <div class="row">
         <div class="col-xs-7">
             <ul class="nav nav-tabs">
-                <li class="active">
-                    <a href="#new" title="New" data-toggle="tab" >
+                <li class="tab__li active" data-tab="tab1">
+                    <a href="#new" class="tab__link" title="New"  >
                         <span class="icon new-orders-icon"></span>
                         <span>New</span>
-                        <span class="number">1</span>
+                        <span class="number number--order">1</span>
                     </a>
                 </li>
 
@@ -30,11 +30,11 @@
                     <span class="orders-state-transition-indicator"></span>
                 </li>
 
-                <li>
-                    <a href="#packing" title="Packing" data-toggle="tab" >
+                <li class="tab__li" data-tab="tab2" >
+                    <a href="#packing" class="tab__link" title="Packing" >
                         <span class="icon preparing-orders-icon"></span>
                         <span>Packing</span>
-                        
+                        <span class="number number--packing">1</span>
                     </a>
 
                     
@@ -44,11 +44,11 @@
                     <span class="orders-state-transition-indicator"></span>
                 </li>
 
-                <li>
-                    <a href="#ready" title="Ready" data-toggle="tab" >
+                <li class="tab__li" data-tab="tab3" >
+                    <a href="#ready" class="tab__link" title="Ready" >
                         <span class="icon ready-orders-icon"></span>
                         <span>Ready</span>
-                    
+                        <span class="number number--ready">1</span>
                     </a>
 
                 
@@ -58,11 +58,11 @@
                     <span class="orders-state-transition-indicator"></span>
                 </li>
 
-                <li>
-                    <a href="#more" title="More" data-toggle="tab" >
+                <li class="tab__li" data-tab="tab4">
+                    <a href="#past" class="tab__link" title="More"  >
                         <span class="icon more-orders-icon"></span>
                         <span>Past Orders</span>
-                        
+                        <span class="number number--past">1</span>
                     </a>
 
                     
@@ -201,617 +201,1392 @@
     {/foreach}
     </table>
 </div> *}
-<div class="have-order" id="new">
-    <div class="have-order__left search-order" >
-        <div class="search-order__box-input">
-        {* <i class="icon-search"></i> *}
-        <input class="search-order__input" type="search" placeholder="Search">
-        </div>
-        <ul class="search-order__list">
-            <li class="search-order__box" data-order="order9161">
-                <div class="search-order__left">
-                    <h3 class="search-order__id">
-                        9161
-                    </h3>
-                    <p class="search-order__desc">1 items for #127</p>
-                    <p class="search-order__time">Received a minute ago</p>
-                </div>
-                <div class="search-order__right">
-                    <div class="search-order__img-box">
-                        <img src="https://i.imgur.com/UKWKNWg.png" />
-                    </div>
-                    <p class="search-order__assign">Assigning...</p>
-                </div>
-            </li>
-            <li class="search-order__box" data-order="order9162">
-                <div class="search-order__left">
-                    <h3 class="search-order__id">
-                        9162
-                    </h3>
-                    <p class="search-order__desc">1 items for #127</p>
-                    <p class="search-order__time">Received a minute ago</p>
-                </div>
-                <div class="search-order__right">
-                    <div class="search-order__img-box">
-                        <img src="https://i.imgur.com/UKWKNWg.png" />
-                    </div>
-                    <p class="search-order__assign">Assigning...</p>
-                </div>
-            </li>
-           
-        </ul>
-    </div>
-    <div class="have-order__content">
-        <div class="have-order__mid">
-            <div class="have-order__mid--rel" data-order="order9161">
-                <div class="search-order__box search-order__box--mid">
+<div class="have-content">
+    <!-- order -->
+    <div class="have-tab have-order" id="new" data-tab="tab1">
+        <div class="have-order__left search-order" >
+            <div class="search-order__box-input">
+            {* <i class="icon-search"></i> *}
+            <input class="search-order__input" type="search" placeholder="Search">
+            </div>
+            <ul class="search-order__list">
+                <li class="search-order__box" data-order="order9161">
                     <div class="search-order__left">
-                        <h3 class="search-order__id search-order__id--bold">
-                            #78395909161<span class="search-order__new">New</span>
-                        </h3>
-                        <p class="search-order__desc search-order__desc--gray">1 items for #127</p>
-                        
-                    </div>
-                    <div class="search-order__right">
-                        
-                        <img class="search-order__print" src="https://i.imgur.com/q6OYhBH.png" />
-                        
-                        <p class="search-order__date">21 Jul 2020 02:08 PM</p>
-                    </div>
-                </div>
-                <ul class="search-order__list-details">
-                    <li class="search-order__details">
-                        <div class="search-order__details--left">
-                            <img src="https://i.imgur.com/76y9dFM.png" />
-                            <div class="search-order__dish">
-                                <p class="search-order__title">Chicken Biryani</p>
-                                <p class="search-order__type">Biryani</p>
-                                <p class="search-order__price">$150</p>
-                            </div>
-                        </div>
-                        <div class="search-order__details--right">
-                            <p class="search-order__amount">X1</p>
-                        </div>
-                    </li>
-                    <li class="search-order__details">
-                        <div class="search-order__details--left">
-                            <img src="https://i.imgur.com/76y9dFM.png" />
-                            <div class="search-order__dish">
-                                <p class="search-order__title">Chicken Biryani</p>
-                                <p class="search-order__type">Biryani</p>
-                                <p class="search-order__price">$150</p>
-                            </div>
-                        </div>
-                        <div class="search-order__details--right">
-                            <p class="search-order__amount">X1</p>
-                        </div>
-                    </li>
-                    <li class="search-order__details">
-                        <div class="search-order__details--left">
-                            <img src="https://i.imgur.com/76y9dFM.png" />
-                            <div class="search-order__dish">
-                                <p class="search-order__title">Chicken Biryani</p>
-                                <p class="search-order__type">Biryani</p>
-                                <p class="search-order__price">$150</p>
-                            </div>
-                        </div>
-                        <div class="search-order__details--right">
-                            <p class="search-order__amount">X1</p>
-                        </div>
-                    </li>
-                    
-                </ul>
-
-                {* <div class="search-order__buttons">
-                    <button class="search-order__buttons--btn search-order__buttons--mark"  data-toggle="modal" data-target="#exampleModal">Mark out of stork</button>
-                    <button class="search-order__buttons--btn search-order__buttons--confirm">Confirm order</button>
-                </div> *}
-                <div class="search-order__buttons">
-                    <input type="button" class="search-order__buttons--btn search-order__buttons--mark"  data-toggle="modal" data-target="#exampleModal" value="Mark out of stork" />
-                    <input type="button" class="search-order__buttons--btn search-order__buttons--confirm" onclick="openPacking()" value="Confirm order" />
-                </div>
-            </div>
-            <div class="have-order__mid--rel" data-order="order9162">
-                <div class="search-order__box search-order__box--mid">
-                    <div class="search-order__left">
-                        <h3 class="search-order__id search-order__id--bold">
-                            #78395909162<span class="search-order__new">New</span>
-                        </h3>
-                        <p class="search-order__desc search-order__desc--gray">1 items for #127</p>
-                        
-                    </div>
-                    <div class="search-order__right">
-                        
-                        <img class="search-order__print" src="https://i.imgur.com/q6OYhBH.png" />
-                        
-                        <p class="search-order__date">21 Jul 2020 02:08 PM</p>
-                    </div>
-                </div>
-                <ul class="search-order__list-details">
-                    <li class="search-order__details">
-                        <div class="search-order__details--left">
-                            <img src="https://i.imgur.com/76y9dFM.png" />
-                            <div class="search-order__dish">
-                                <p class="search-order__title">Chicken Biryani</p>
-                                <p class="search-order__type">Biryani</p>
-                                <p class="search-order__price">$180</p>
-                            </div>
-                        </div>
-                        <div class="search-order__details--right">
-                            <p class="search-order__amount">X2</p>
-                        </div>
-                    </li>
-                    <li class="search-order__details">
-                        <div class="search-order__details--left">
-                            <img src="https://i.imgur.com/76y9dFM.png" />
-                            <div class="search-order__dish">
-                                <p class="search-order__title">Chicken Biryani</p>
-                                <p class="search-order__type">Biryani</p>
-                                <p class="search-order__price">$180</p>
-                            </div>
-                        </div>
-                        <div class="search-order__details--right">
-                            <p class="search-order__amount">X2</p>
-                        </div>
-                    </li>
-                
-                    
-                </ul>
-
-                {* <div class="search-order__buttons">
-                    <button class="search-order__buttons--btn search-order__buttons--mark"  data-toggle="modal" data-target="#exampleModal">Mark out of stork</button>
-                    <button class="search-order__buttons--btn search-order__buttons--confirm">Confirm order</button>
-                </div> *}
-                <div class="search-order__buttons">
-                    <input type="button" class="search-order__buttons--btn search-order__buttons--mark"  data-toggle="modal" data-target="#exampleModal" value="Mark out of stork" />
-                    <input type="button" class="search-order__buttons--btn search-order__buttons--confirm" value="Confirm order" />
-                </div>
-            </div>
-        </div>
-        <div class="have-order__right">
-            <div class="search-order__right-top" data-order="order9161">
-                <div class="search-order__right-box">
-                    <div class="search-order__img-box search-order__img-box--big">
-                        <img src="https://i.imgur.com/CYDfvhi.png" />
-                    </div>
-                    <div class="search-order__right-content">
-                        <h4 class="search-order__right-title">
-                            Packing Time
-                        </h4>
-                        <p class="search-order__right-time">
-                            20 mins
-                        </p>
-                        <p class="search-order__right-status">
-                            Packing not started
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="search-order__right-box">
-                    <div class="search-order__img-box search-order__img-box--big">
-                        <img src="https://i.imgur.com/UKWKNWg.png" />
-                    </div>
-                    <div class="search-order__right-content">
-                        <h4 class="search-order__right-title">
-                            Delivery Executive
-                        </h4>
-                        <p class="search-order__right-assign">
-                            Pending assignent...
-                        </p>
-                        
-                    </div>
-                </div>
-
-                <div class="search-order__right-box">
-                    <div class="search-order__img-box search-order__img-box--big">
-                        <img src="https://i.imgur.com/OFK8M5L.png" />
-                    </div>
-                    <div class="search-order__right-content">
-                        <h4 class="search-order__right-title">
-                            Grand Total
-                        </h4>
-                        <p class="search-order__right-price">
-                            $127
-                        </p>
-                        <div class="search-order__right-info">
-                            <div class="search-order__right-row">
-                                <p class="search-order__right-label">Item total</p>
-                                <p class="search-order__right-money">$127</p>
-                            </div>
-                            <div class="search-order__right-row">
-                                <p class="search-order__right-label">GST</p>
-                                <p class="search-order__right-money">$0</p>
-                            </div>
-                            <div class="search-order__right-row">
-                                <p class="search-order__right-label">Discount</p>
-                                <p class="search-order__right-money">$30</p>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-                <div class="search-order__right-box">
-                    <a class="search-order__link" href="javascript:void(0)">Need help with this order?</a>
-                </div>
-            </div>
-            <div class="search-order__right-top" data-order="order9162">
-                <div class="search-order__right-box">
-                    <div class="search-order__img-box search-order__img-box--big">
-                        <img src="https://i.imgur.com/CYDfvhi.png" />
-                    </div>
-                    <div class="search-order__right-content">
-                        <h4 class="search-order__right-title">
-                            Packing Time
-                        </h4>
-                        <p class="search-order__right-time">
-                            19 mins
-                        </p>
-                        <p class="search-order__right-status">
-                            Packing not started
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="search-order__right-box">
-                    <div class="search-order__img-box search-order__img-box--big">
-                        <img src="https://i.imgur.com/UKWKNWg.png" />
-                    </div>
-                    <div class="search-order__right-content">
-                        <h4 class="search-order__right-title">
-                            Delivery Executive
-                        </h4>
-                        <p class="search-order__right-assign">
-                            Pending assignent...
-                        </p>
-                        
-                    </div>
-                </div>
-
-                <div class="search-order__right-box">
-                    <div class="search-order__img-box search-order__img-box--big">
-                        <img src="https://i.imgur.com/OFK8M5L.png" />
-                    </div>
-                    <div class="search-order__right-content">
-                        <h4 class="search-order__right-title">
-                            Grand Total
-                        </h4>
-                        <p class="search-order__right-price">
-                            $150
-                        </p>
-                        <div class="search-order__right-info">
-                            <div class="search-order__right-row">
-                                <p class="search-order__right-label">Item total</p>
-                                <p class="search-order__right-money">$150</p>
-                            </div>
-                            <div class="search-order__right-row">
-                                <p class="search-order__right-label">GST</p>
-                                <p class="search-order__right-money">$0</p>
-                            </div>
-                            <div class="search-order__right-row">
-                                <p class="search-order__right-label">Discount</p>
-                                <p class="search-order__right-money">$30</p>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-                <div class="search-order__right-box">
-                    <a class="search-order__link" href="javascript:void(0)">Need help with this order?</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- packing -->
-<div class="have-packing" id="packing">
-    <div class="have-packing__left search-packing" >
-        <div class="search-packing__box-input">
-        {* <i class="icon-search"></i> *}
-        <input class="search-packing__input" type="search" placeholder="Search">
-        </div>
-        <ul class="search-packing__list">
-            <li class="search-packing__box search-packing__box--column" data-order="order9161">
-                <div class="search-packing__container">
-                    <div class="search-packing__left">
-                        <h3 class="search-packing__id search-packing__id--packing">
+                        <h3 class="search-order__id">
                             9161
                         </h3>
-                        <p class="search-packing__desc">1 items for #127</p>
-                        <p class="search-packing__time">Received a minute ago</p>
+                        <p class="search-order__desc">1 items for #127</p>
+                        <p class="search-order__time">Received a minute ago</p>
                     </div>
-                    <div class="search-packing__right">
-                        <div class="search-packing__img-box">
+                    <div class="search-order__right">
+                        <div class="search-order__img-box">
                             <img src="https://i.imgur.com/UKWKNWg.png" />
                         </div>
-                        <p class="search-packing__assign">Assigning...</p>
+                        <p class="search-order__assign">Assigning...</p>
                     </div>
-                </div>
-                <div class="search-packing__notcf">
-                    <img src="https://i.imgur.com/QBVp9RA.png" />
-                    <span>Order not confirmed within 6 mins</span>
-                </div>
-            </li>
-            <li class="search-packing__box" data-order="order9162">
-                <div class="search-packing__left">
-                    <h3 class="search-packing__id">
-                        9162
-                    </h3>
-                    <p class="search-packing__desc">1 items for #127</p>
-                    <p class="search-packing__time">Received a minute ago</p>
-                </div>
-                <div class="search-packing__right">
-                    <div class="search-packing__img-box">
-                        <img src="https://i.imgur.com/UKWKNWg.png" />
-                    </div>
-                    <p class="search-packing__assign">Assigning...</p>
-                </div>
-            </li>
-           
-        </ul>
-    </div>
-    <div class="have-packing__content">
-        <div class="have-packing__mid">
-            <div class="have-packing__mid--rel" data-order="order9161">
-                <div class="search-packing__box search-packing__box--mid">
-                    <div class="search-packing__left">
-                        <h3 class="search-packing__id search-packing__id--bold search-packing__id--packing">
-                            #78395909161<span class="search-packing__new search-packing__new--packing">Packing</span>
+                </li>
+                <li class="search-order__box" data-order="order9162">
+                    <div class="search-order__left">
+                        <h3 class="search-order__id">
+                            9162
                         </h3>
-                        <p class="search-packing__desc search-packing__desc--gray">1 items for #127</p>
-                        
+                        <p class="search-order__desc">1 items for #127</p>
+                        <p class="search-order__time">Received a minute ago</p>
                     </div>
-                    <div class="search-packing__right">
-                        
-                        <img class="search-packing__print" src="https://i.imgur.com/q6OYhBH.png" />
-                        
-                        <p class="search-packing__date">21 Jul 2020 02:08 PM</p>
+                    <div class="search-order__right">
+                        <div class="search-order__img-box">
+                            <img src="https://i.imgur.com/UKWKNWg.png" />
+                        </div>
+                        <p class="search-order__assign">Assigning...</p>
                     </div>
-                </div>
-                <ul class="search-packing__list-details">
-                    <li class="search-packing__details">
-                        <div class="search-packing__details--left">
-                            <img src="https://i.imgur.com/76y9dFM.png" />
-                            <div class="search-packing__dish">
-                                <p class="search-packing__title">Chicken Biryani</p>
-                                <p class="search-packing__type">Biryani</p>
-                                <p class="search-packing__price">$150</p>
-                            </div>
-                        </div>
-                        <div class="search-packing__details--right">
-                            <p class="search-packing__amount">X1</p>
-                        </div>
-                    </li>
-                    <li class="search-packing__details">
-                        <div class="search-packing__details--left">
-                            <img src="https://i.imgur.com/76y9dFM.png" />
-                            <div class="search-packing__dish">
-                                <p class="search-packing__title">Chicken Biryani</p>
-                                <p class="search-packing__type">Biryani</p>
-                                <p class="search-packing__price">$150</p>
-                            </div>
-                        </div>
-                        <div class="search-packing__details--right">
-                            <p class="search-packing__amount">X1</p>
-                        </div>
-                    </li>
-                    <li class="search-packing__details">
-                        <div class="search-packing__details--left">
-                            <img src="https://i.imgur.com/76y9dFM.png" />
-                            <div class="search-packing__dish">
-                                <p class="search-packing__title">Chicken Biryani</p>
-                                <p class="search-packing__type">Biryani</p>
-                                <p class="search-packing__price">$150</p>
-                            </div>
-                        </div>
-                        <div class="search-packing__details--right">
-                            <p class="search-packing__amount">X1</p>
-                        </div>
-                    </li>
-                    
-                </ul>
-
-                {* <div class="search-packing__buttons">
-                    <button class="search-packing__buttons--btn search-packing__buttons--mark"  data-toggle="modal" data-target="#exampleModal">Mark out of stork</button>
-                    <button class="search-packing__buttons--btn search-packing__buttons--confirm">Confirm order</button>
-                </div> *}
-                <div class="search-packing__buttons">
-                    {* <input type="button" class="search-packing__buttons--btn search-packing__buttons--mark"  data-toggle="modal" data-target="#exampleModal" value="Mark out of stork" /> *}
-                    <input type="button" class="search-packing__buttons--btn search-packing__buttons--packing" value="Mark order packed" />
-                </div>
-            </div>
-            <div class="have-packing__mid--rel" data-order="order9162">
-                <div class="search-packing__box search-packing__box--mid">
-                    <div class="search-packing__left">
-                        <h3 class="search-packing__id search-packing__id--bold">
-                            #78395909162<span class="search-packing__new">New</span>
-                        </h3>
-                        <p class="search-packing__desc search-packing__desc--gray">1 items for #127</p>
-                        
-                    </div>
-                    <div class="search-packing__right">
-                        
-                        <img class="search-packing__print" src="https://i.imgur.com/q6OYhBH.png" />
-                        
-                        <p class="search-packing__date">21 Jul 2020 02:08 PM</p>
-                    </div>
-                </div>
-                <ul class="search-packing__list-details">
-                    <li class="search-packing__details">
-                        <div class="search-packing__details--left">
-                            <img src="https://i.imgur.com/76y9dFM.png" />
-                            <div class="search-packing__dish">
-                                <p class="search-packing__title">Chicken Biryani</p>
-                                <p class="search-packing__type">Biryani</p>
-                                <p class="search-packing__price">$180</p>
-                            </div>
-                        </div>
-                        <div class="search-packing__details--right">
-                            <p class="search-packing__amount">X2</p>
-                        </div>
-                    </li>
-                    <li class="search-packing__details">
-                        <div class="search-packing__details--left">
-                            <img src="https://i.imgur.com/76y9dFM.png" />
-                            <div class="search-packing__dish">
-                                <p class="search-packing__title">Chicken Biryani</p>
-                                <p class="search-packing__type">Biryani</p>
-                                <p class="search-packing__price">$180</p>
-                            </div>
-                        </div>
-                        <div class="search-packing__details--right">
-                            <p class="search-packing__amount">X2</p>
-                        </div>
-                    </li>
-                
-                    
-                </ul>
-
-                {* <div class="search-packing__buttons">
-                    <button class="search-packing__buttons--btn search-packing__buttons--mark"  data-toggle="modal" data-target="#exampleModal">Mark out of stork</button>
-                    <button class="search-packing__buttons--btn search-packing__buttons--confirm">Confirm order</button>
-                </div> *}
-                <div class="search-packing__buttons">
-                    <input type="button" class="search-packing__buttons--btn search-packing__buttons--mark"  data-toggle="modal" data-target="#exampleModal" value="Mark out of stork" />
-                    <input type="button" class="search-packing__buttons--btn search-packing__buttons--confirm" value="Confirm order" />
-                </div>
-            </div>
+                </li>
+            
+            </ul>
         </div>
-        <div class="have-packing__right">
-            <div class="search-packing__right-top" data-order="order9161">
-                <div class="search-packing__right-box">
-                    <div class="search-packing__img-box search-packing__img-box--big">
-                        <img src="https://i.imgur.com/CYDfvhi.png" />
+        <div class="have-order__content">
+            <div class="have-order__mid">
+                <div class="have-order__mid--rel" data-order="order9161">
+                    <div class="search-order__box search-order__box--mid">
+                        <div class="search-order__left">
+                            <h3 class="search-order__id search-order__id--bold">
+                                #78395909161<span class="search-order__new">New</span>
+                            </h3>
+                            <p class="search-order__desc search-order__desc--gray">1 items for #127</p>
+                            
+                        </div>
+                        <div class="search-order__right">
+                            
+                            <img class="search-order__print" src="https://i.imgur.com/q6OYhBH.png" />
+                            
+                            <p class="search-order__date">21 Jul 2020 02:08 PM</p>
+                        </div>
                     </div>
-                    <div class="search-packing__right-content">
-                        <h4 class="search-packing__right-title">
-                            Packing Time
-                        </h4>
-                        <p class="search-packing__right-time">
-                            14 mins remaning
-                        </p>
-                        <p class="search-packing__right-status">
-                            Packin started
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="search-packing__right-box">
-                    <div class="search-packing__img-box search-packing__img-box--big">
-                        <img src="https://i.imgur.com/UKWKNWg.png" />
-                    </div>
-                    <div class="search-packing__right-content">
-                        <h4 class="search-packing__right-title">
-                            Delivery Executive
-                        </h4>
-                        <p class="search-packing__right-assign">
-                            Pending assignent...
-                        </p>
+                    <ul class="search-order__list-details">
+                        <li class="search-order__details">
+                            <div class="search-order__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-order__dish">
+                                    <p class="search-order__title">Chicken Biryani</p>
+                                    <p class="search-order__type">Biryani</p>
+                                    <p class="search-order__price">$150</p>
+                                </div>
+                            </div>
+                            <div class="search-order__details--right">
+                                <p class="search-order__amount">X1</p>
+                            </div>
+                        </li>
+                        <li class="search-order__details">
+                            <div class="search-order__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-order__dish">
+                                    <p class="search-order__title">Chicken Biryani</p>
+                                    <p class="search-order__type">Biryani</p>
+                                    <p class="search-order__price">$150</p>
+                                </div>
+                            </div>
+                            <div class="search-order__details--right">
+                                <p class="search-order__amount">X1</p>
+                            </div>
+                        </li>
+                        <li class="search-order__details">
+                            <div class="search-order__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-order__dish">
+                                    <p class="search-order__title">Chicken Biryani</p>
+                                    <p class="search-order__type">Biryani</p>
+                                    <p class="search-order__price">$150</p>
+                                </div>
+                            </div>
+                            <div class="search-order__details--right">
+                                <p class="search-order__amount">X1</p>
+                            </div>
+                        </li>
                         
-                    </div>
-                </div>
+                    </ul>
 
-                <div class="search-packing__right-box">
-                    <div class="search-packing__img-box search-packing__img-box--big">
-                        <img src="https://i.imgur.com/OFK8M5L.png" />
-                    </div>
-                    <div class="search-packing__right-content">
-                        <h4 class="search-packing__right-title">
-                            Grand Total
-                        </h4>
-                        <p class="search-packing__right-price">
-                            $127
-                        </p>
-                        <div class="search-packing__right-info">
-                            <div class="search-packing__right-row">
-                                <p class="search-packing__right-label">Item total</p>
-                                <p class="search-packing__right-money">$127</p>
-                            </div>
-                            <div class="search-packing__right-row">
-                                <p class="search-packing__right-label">GST</p>
-                                <p class="search-packing__right-money">$0</p>
-                            </div>
-                            <div class="search-packing__right-row">
-                                <p class="search-packing__right-label">Discount</p>
-                                <p class="search-packing__right-money">$30</p>
-                            </div>
-                        </div> 
+                    {* <div class="search-order__buttons">
+                        <button class="search-order__buttons--btn search-order__buttons--mark"  data-tab="modal" data-target="#exampleModal">Mark out of stork</button>
+                        <button class="search-order__buttons--btn search-order__buttons--confirm">Confirm order</button>
+                    </div> *}
+                    <div class="search-order__buttons">
+                        <input type="button" class="search-order__buttons--btn search-order__buttons--mark"  data-toggle="modal" data-target="#showStork" value="Mark out of stork" />
+
+                        <input type="button" class="search-order__buttons--btn search-order__buttons--confirm" onclick="openPacking()" value="Confirm order" />
                     </div>
                 </div>
-                <div class="search-packing__right-box">
-                    <a class="search-packing__link" href="javascript:void(0)">Need help with this order?</a>
+                <div class="have-order__mid--rel" data-order="order9162">
+                    <div class="search-order__box search-order__box--mid">
+                        <div class="search-order__left">
+                            <h3 class="search-order__id search-order__id--bold">
+                                #78395909162<span class="search-order__new">New</span>
+                            </h3>
+                            <p class="search-order__desc search-order__desc--gray">1 items for #127</p>
+                            
+                        </div>
+                        <div class="search-order__right">
+                            
+                            <img class="search-order__print" src="https://i.imgur.com/q6OYhBH.png" />
+                            
+                            <p class="search-order__date">21 Jul 2020 02:08 PM</p>
+                        </div>
+                    </div>
+                    <ul class="search-order__list-details">
+                        <li class="search-order__details">
+                            <div class="search-order__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-order__dish">
+                                    <p class="search-order__title">Chicken Biryani</p>
+                                    <p class="search-order__type">Biryani</p>
+                                    <p class="search-order__price">$180</p>
+                                </div>
+                            </div>
+                            <div class="search-order__details--right">
+                                <p class="search-order__amount">X2</p>
+                            </div>
+                        </li>
+                        <li class="search-order__details">
+                            <div class="search-order__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-order__dish">
+                                    <p class="search-order__title">Chicken Biryani</p>
+                                    <p class="search-order__type">Biryani</p>
+                                    <p class="search-order__price">$180</p>
+                                </div>
+                            </div>
+                            <div class="search-order__details--right">
+                                <p class="search-order__amount">X2</p>
+                            </div>
+                        </li>
+                    
+                        
+                    </ul>
+
+                    {* <div class="search-order__buttons">
+                        <button class="search-order__buttons--btn search-order__buttons--mark"  data-tab="modal" data-target="#exampleModal">Mark out of stork</button>
+                        <button class="search-order__buttons--btn search-order__buttons--confirm">Confirm order</button>
+                    </div> *}
+                    <div class="search-order__buttons">
+                        <input type="button" class="search-order__buttons--btn search-order__buttons--mark"  data-toggle="modal" data-target="#showStork" value="Mark out of stork" />
+                        <input type="button" class="search-order__buttons--btn search-order__buttons--confirm" value="Confirm order" onclick="openPacking()" />
+                    </div>
                 </div>
             </div>
-            <div class="search-packing__right-top" data-order="order9162">
-                <div class="search-packing__right-box">
-                    <div class="search-packing__img-box search-packing__img-box--big">
-                        <img src="https://i.imgur.com/CYDfvhi.png" />
+            <div class="have-order__right">
+                <div class="search-order__right-top" data-order="order9161">
+                    <div class="search-order__right-box">
+                        <div class="search-order__img-box search-order__img-box--big">
+                            <img src="https://i.imgur.com/CYDfvhi.png" />
+                        </div>
+                        <div class="search-order__right-content">
+                            <h4 class="search-order__right-title">
+                                Packing Time
+                            </h4>
+                            <p class="search-order__right-time">
+                                20 mins
+                            </p>
+                            <p class="search-order__right-status">
+                                Packing not started
+                            </p>
+                        </div>
                     </div>
-                    <div class="search-packing__right-content">
-                        <h4 class="search-packing__right-title">
-                            Packing Time
-                        </h4>
-                        <p class="search-packing__right-time">
-                            19 mins
-                        </p>
-                        <p class="search-packing__right-status">
-                            Packing not started
-                        </p>
+                    
+                    <div class="search-order__right-box">
+                        <div class="search-order__img-box search-order__img-box--big">
+                            <img src="https://i.imgur.com/UKWKNWg.png" />
+                        </div>
+                        <div class="search-order__right-content">
+                            <h4 class="search-order__right-title">
+                                Delivery Executive
+                            </h4>
+                            <p class="search-order__right-assign">
+                                Pending assignent...
+                            </p>
+                            
+                        </div>
                     </div>
-                </div>
-                
-                <div class="search-packing__right-box">
-                    <div class="search-packing__img-box search-packing__img-box--big">
-                        <img src="https://i.imgur.com/UKWKNWg.png" />
-                    </div>
-                    <div class="search-packing__right-content">
-                        <h4 class="search-packing__right-title">
-                            Delivery Executive
-                        </h4>
-                        <p class="search-packing__right-assign">
-                            Pending assignent...
-                        </p>
-                        
-                    </div>
-                </div>
 
-                <div class="search-packing__right-box">
-                    <div class="search-packing__img-box search-packing__img-box--big">
-                        <img src="https://i.imgur.com/OFK8M5L.png" />
+                    <div class="search-order__right-box">
+                        <div class="search-order__img-box search-order__img-box--big">
+                            <img src="https://i.imgur.com/OFK8M5L.png" />
+                        </div>
+                        <div class="search-order__right-content">
+                            <h4 class="search-order__right-title">
+                                Grand Total
+                            </h4>
+                            <p class="search-order__right-price">
+                                $127
+                            </p>
+                            <div class="search-order__right-info">
+                                <div class="search-order__right-row">
+                                    <p class="search-order__right-label">Item total</p>
+                                    <p class="search-order__right-money">$127</p>
+                                </div>
+                                <div class="search-order__right-row">
+                                    <p class="search-order__right-label">GST</p>
+                                    <p class="search-order__right-money">$0</p>
+                                </div>
+                                <div class="search-order__right-row">
+                                    <p class="search-order__right-label">Discount</p>
+                                    <p class="search-order__right-money">$30</p>
+                                </div>
+                            </div> 
+                        </div>
                     </div>
-                    <div class="search-packing__right-content">
-                        <h4 class="search-packing__right-title">
-                            Grand Total
-                        </h4>
-                        <p class="search-packing__right-price">
-                            $150
-                        </p>
-                        <div class="search-packing__right-info">
-                            <div class="search-packing__right-row">
-                                <p class="search-packing__right-label">Item total</p>
-                                <p class="search-packing__right-money">$150</p>
-                            </div>
-                            <div class="search-packing__right-row">
-                                <p class="search-packing__right-label">GST</p>
-                                <p class="search-packing__right-money">$0</p>
-                            </div>
-                            <div class="search-packing__right-row">
-                                <p class="search-packing__right-label">Discount</p>
-                                <p class="search-packing__right-money">$30</p>
-                            </div>
-                        </div> 
+                    <div class="search-order__right-box">
+                        <a class="search-order__link" href="javascript:void(0)">Need help with this order?</a>
                     </div>
                 </div>
-                <div class="search-packing__right-box">
-                    <a class="search-packing__link" href="javascript:void(0)">Need help with this order?</a>
+                <div class="search-order__right-top" data-order="order9162">
+                    <div class="search-order__right-box">
+                        <div class="search-order__img-box search-order__img-box--big">
+                            <img src="https://i.imgur.com/CYDfvhi.png" />
+                        </div>
+                        <div class="search-order__right-content">
+                            <h4 class="search-order__right-title">
+                                Packing Time
+                            </h4>
+                            <p class="search-order__right-time">
+                                19 mins
+                            </p>
+                            <p class="search-order__right-status">
+                                Packing not started
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="search-order__right-box">
+                        <div class="search-order__img-box search-order__img-box--big">
+                            <img src="https://i.imgur.com/UKWKNWg.png" />
+                        </div>
+                        <div class="search-order__right-content">
+                            <h4 class="search-order__right-title">
+                                Delivery Executive
+                            </h4>
+                            <p class="search-order__right-assign">
+                                Pending assignent...
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="search-order__right-box">
+                        <div class="search-order__img-box search-order__img-box--big">
+                            <img src="https://i.imgur.com/OFK8M5L.png" />
+                        </div>
+                        <div class="search-order__right-content">
+                            <h4 class="search-order__right-title">
+                                Grand Total
+                            </h4>
+                            <p class="search-order__right-price">
+                                $150
+                            </p>
+                            <div class="search-order__right-info">
+                                <div class="search-order__right-row">
+                                    <p class="search-order__right-label">Item total</p>
+                                    <p class="search-order__right-money">$150</p>
+                                </div>
+                                <div class="search-order__right-row">
+                                    <p class="search-order__right-label">GST</p>
+                                    <p class="search-order__right-money">$0</p>
+                                </div>
+                                <div class="search-order__right-row">
+                                    <p class="search-order__right-label">Discount</p>
+                                    <p class="search-order__right-money">$30</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="search-order__right-box">
+                        <a class="search-order__link" href="javascript:void(0)">Need help with this order?</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- packing -->
+    <div class="have-tab have-packing" id="packing" data-tab="tab2">
+        <div class="have-packing__left search-packing" >
+            <div class="search-packing__box-input">
+            {* <i class="icon-search"></i> *}
+            <input class="search-packing__input" type="search" placeholder="Search">
+            </div>
+            <ul class="search-packing__list">
+                <li class="search-packing__box search-packing__box--column search-packing__box--nopd" data-order="order9161">
+                    <div class="search-packing__container">
+                        <div class="search-packing__left">
+                            <h3 class="search-packing__id search-packing__id--packing">
+                                9161
+                            </h3>
+                            <p class="search-packing__desc">1 items for #127</p>
+                            <p class="search-packing__time">Received a minute ago</p>
+                        </div>
+                        <div class="search-packing__right">
+                            <div class="search-packing__img-box">
+                                <img src="https://i.imgur.com/UKWKNWg.png" />
+                            </div>
+                            <p class="search-packing__assign">Assigning...</p>
+                        </div>
+                    </div>
+                    <div class="search-packing__notcf">
+                        <img src="https://i.imgur.com/QBVp9RA.png" />
+                        <span>Order not confirmed within 6 mins</span>
+                    </div>
+                </li>
+                <li class="search-packing__box search-packing__box--column search-packing__box--nopd" data-order="order9162">
+                    <div class="search-packing__container">
+                        <div class="search-packing__left">
+                            <h3 class="search-packing__id search-packing__id--packing">
+                                9162
+                            </h3>
+                            <p class="search-packing__desc">1 items for #127</p>
+                            <p class="search-packing__time">Received a minute ago</p>
+                        </div>
+                        <div class="search-packing__right">
+                            <div class="search-packing__img-box">
+                                <img src="https://i.imgur.com/UKWKNWg.png" />
+                            </div>
+                            <p class="search-packing__assign">Assigning...</p>
+                        </div>
+                    </div>
+                    <div class="search-packing__notcf">
+                        <img src="https://i.imgur.com/QBVp9RA.png" />
+                        <span>Order not confirmed within 6 mins</span>
+                    </div>
+                </li>
+            
+            </ul>
+        </div>
+        <div class="have-packing__content">
+            <div class="have-packing__mid">
+                <div class="have-packing__mid--rel" data-order="order9161">
+                    <div class="search-packing__box search-packing__box--mid">
+                        <div class="search-packing__left">
+                            <h3 class="search-packing__id search-packing__id--bold search-packing__id--packing">
+                                #78395909161<span class="search-packing__new search-packing__new--packing">Packing</span>
+                            </h3>
+                            <p class="search-packing__desc search-packing__desc--gray">1 items for #127</p>
+                            
+                        </div>
+                        <div class="search-packing__right">
+                            
+                            <img class="search-packing__print" src="https://i.imgur.com/q6OYhBH.png" />
+                            
+                            <p class="search-packing__date">21 Jul 2020 02:08 PM</p>
+                        </div>
+                    </div>
+                    <ul class="search-packing__list-details">
+                        <li class="search-packing__details">
+                            <div class="search-packing__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-packing__dish">
+                                    <p class="search-packing__title">Chicken Biryani</p>
+                                    <p class="search-packing__type">Biryani</p>
+                                    <p class="search-packing__price">$150</p>
+                                </div>
+                            </div>
+                            <div class="search-packing__details--right">
+                                <p class="search-packing__amount">X1</p>
+                            </div>
+                        </li>
+                        <li class="search-packing__details">
+                            <div class="search-packing__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-packing__dish">
+                                    <p class="search-packing__title">Chicken Biryani</p>
+                                    <p class="search-packing__type">Biryani</p>
+                                    <p class="search-packing__price">$150</p>
+                                </div>
+                            </div>
+                            <div class="search-packing__details--right">
+                                <p class="search-packing__amount">X1</p>
+                            </div>
+                        </li>
+                        <li class="search-packing__details">
+                            <div class="search-packing__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-packing__dish">
+                                    <p class="search-packing__title">Chicken Biryani</p>
+                                    <p class="search-packing__type">Biryani</p>
+                                    <p class="search-packing__price">$150</p>
+                                </div>
+                            </div>
+                            <div class="search-packing__details--right">
+                                <p class="search-packing__amount">X1</p>
+                            </div>
+                        </li>
+                        
+                    </ul>
+
+                
+                    <div class="search-packing__buttons">
+                        <input type="button" class="search-packing__buttons--btn search-packing__buttons--packing" value="Mark order packed" onclick="openReady()"/>
+                    </div>
+                </div>
+                <div class="have-packing__mid--rel" data-order="order9162">
+                    <div class="search-packing__box search-packing__box--mid">
+                        <div class="search-packing__left">
+                            <h3 class="search-packing__id search-packing__id--bold search-packing__id--packing">
+                                #78395909162<span class="search-packing__new search-packing__new--packing">Packing</span>
+                            </h3>
+                            <p class="search-packing__desc search-packing__desc--gray">1 items for #127</p>
+                            
+                        </div>
+                        <div class="search-packing__right">
+                            
+                            <img class="search-packing__print" src="https://i.imgur.com/q6OYhBH.png" />
+                            
+                            <p class="search-packing__date">21 Jul 2020 02:08 PM</p>
+                        </div>
+                    </div>
+                    <ul class="search-packing__list-details">
+                        <li class="search-packing__details">
+                            <div class="search-packing__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-packing__dish">
+                                    <p class="search-packing__title">Chicken Biryani</p>
+                                    <p class="search-packing__type">Biryani</p>
+                                    <p class="search-packing__price">$120</p>
+                                </div>
+                            </div>
+                            <div class="search-packing__details--right">
+                                <p class="search-packing__amount">X1</p>
+                            </div>
+                        </li>
+                        <li class="search-packing__details">
+                            <div class="search-packing__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-packing__dish">
+                                    <p class="search-packing__title">Chicken Biryani</p>
+                                    <p class="search-packing__type">Biryani</p>
+                                    <p class="search-packing__price">$120</p>
+                                </div>
+                            </div>
+                            <div class="search-packing__details--right">
+                                <p class="search-packing__amount">X2</p>
+                            </div>
+                        </li>
+                        <li class="search-packing__details">
+                            <div class="search-packing__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-packing__dish">
+                                    <p class="search-packing__title">Chicken Biryani</p>
+                                    <p class="search-packing__type">Biryani</p>
+                                    <p class="search-packing__price">$180</p>
+                                </div>
+                            </div>
+                            <div class="search-packing__details--right">
+                                <p class="search-packing__amount">X1</p>
+                            </div>
+                        </li>
+                        
+                    </ul>
+
+                
+                    <div class="search-packing__buttons">
+                        <input type="button" class="search-packing__buttons--btn search-packing__buttons--packing" value="Mark order packed" onclick="openReady()"/>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="have-packing__right">
+                <div class="search-packing__right-top" data-order="order9161">
+                    <div class="search-packing__right-box">
+                        <div class="search-packing__img-box search-packing__img-box--big">
+                            <img src="https://i.imgur.com/CYDfvhi.png" />
+                        </div>
+                        <div class="search-packing__right-content">
+                            <h4 class="search-packing__right-title">
+                                Packing Time
+                            </h4>
+                            <p class="search-packing__right-time">
+                                10 mins remaning
+                            </p>
+                            <p class="search-packing__right-status">
+                                Packin started
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="search-packing__right-box">
+                        <div class="search-packing__img-box search-packing__img-box--big">
+                            <img src="https://i.imgur.com/UKWKNWg.png" />
+                        </div>
+                        <div class="search-packing__right-content">
+                            <h4 class="search-packing__right-title">
+                                Delivery Executive
+                            </h4>
+                            <p class="search-packing__right-assign">
+                                Pending assignent...
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="search-packing__right-box">
+                        <div class="search-packing__img-box search-packing__img-box--big">
+                            <img src="https://i.imgur.com/OFK8M5L.png" />
+                        </div>
+                        <div class="search-packing__right-content">
+                            <h4 class="search-packing__right-title">
+                                Grand Total
+                            </h4>
+                            <p class="search-packing__right-price">
+                                $122
+                            </p>
+                            <div class="search-packing__right-info">
+                                <div class="search-packing__right-row">
+                                    <p class="search-packing__right-label">Item total</p>
+                                    <p class="search-packing__right-money">$122</p>
+                                </div>
+                                <div class="search-packing__right-row">
+                                    <p class="search-packing__right-label">GST</p>
+                                    <p class="search-packing__right-money">$0</p>
+                                </div>
+                                <div class="search-packing__right-row">
+                                    <p class="search-packing__right-label">Discount</p>
+                                    <p class="search-packing__right-money">$30</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="search-packing__right-box">
+                        <a class="search-packing__link" href="javascript:void(0)">Need help with this order?</a>
+                    </div>
+                </div>
+                <div class="search-packing__right-top" data-order="order9162">
+                    <div class="search-packing__right-box">
+                        <div class="search-packing__img-box search-packing__img-box--big">
+                            <img src="https://i.imgur.com/CYDfvhi.png" />
+                        </div>
+                        <div class="search-packing__right-content">
+                            <h4 class="search-packing__right-title">
+                                Packing Time
+                            </h4>
+                            <p class="search-packing__right-time">
+                                15 mins remaning
+                            </p>
+                            <p class="search-packing__right-status">
+                                Packin started
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="search-packing__right-box">
+                        <div class="search-packing__img-box search-packing__img-box--big">
+                            <img src="https://i.imgur.com/UKWKNWg.png" />
+                        </div>
+                        <div class="search-packing__right-content">
+                            <h4 class="search-packing__right-title">
+                                Delivery Executive
+                            </h4>
+                            <p class="search-packing__right-assign">
+                                Pending assignent...
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="search-packing__right-box">
+                        <div class="search-packing__img-box search-packing__img-box--big">
+                            <img src="https://i.imgur.com/OFK8M5L.png" />
+                        </div>
+                        <div class="search-packing__right-content">
+                            <h4 class="search-packing__right-title">
+                                Grand Total
+                            </h4>
+                            <p class="search-packing__right-price">
+                                $188
+                            </p>
+                            <div class="search-packing__right-info">
+                                <div class="search-packing__right-row">
+                                    <p class="search-packing__right-label">Item total</p>
+                                    <p class="search-packing__right-money">$188</p>
+                                </div>
+                                <div class="search-packing__right-row">
+                                    <p class="search-packing__right-label">GST</p>
+                                    <p class="search-packing__right-money">$0</p>
+                                </div>
+                                <div class="search-packing__right-row">
+                                    <p class="search-packing__right-label">Discount</p>
+                                    <p class="search-packing__right-money">$30</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="search-packing__right-box">
+                        <a class="search-packing__link" href="javascript:void(0)">Need help with this order?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ready -->
+    <div class="have-tab have-ready" id="ready" data-tab="tab3">
+        <div class="have-ready__left search-ready" >
+            <div class="search-ready__box-input">
+            {* <i class="icon-search"></i> *}
+            <input class="search-ready__input" type="search" placeholder="Search">
+            </div>
+            <ul class="search-ready__list">
+                <li class="search-ready__box search-ready__box--column search-ready__box--nopd" data-order="order9161">
+                    <div class="search-ready__container">
+                        <div class="search-ready__left">
+                            <h3 class="search-ready__id search-ready__id--packing">
+                                9161
+                            </h3>
+                            <p class="search-ready__desc">1 items for #127</p>
+                            <p class="search-ready__time">Received a minute ago</p>
+                        </div>
+                        <div class="search-ready__right">
+                            <div class="search-ready__img-box">
+                                <img src="https://i.imgur.com/UKWKNWg.png" />
+                            </div>
+                            <p class="search-ready__assign">Assigned</p>
+                        </div>
+                    </div>
+                
+                </li>
+                <li class="search-ready__box search-ready__box--column search-ready__box--nopd" data-order="order9162">
+                    <div class="search-ready__container">
+                        <div class="search-ready__left">
+                            <h3 class="search-ready__id search-ready__id--packing">
+                                9162
+                            </h3>
+                            <p class="search-ready__desc">1 items for #127</p>
+                            <p class="search-ready__time">Received a minute ago</p>
+                        </div>
+                        <div class="search-ready__right">
+                            <div class="search-ready__img-box">
+                                <img src="https://i.imgur.com/UKWKNWg.png" />
+                            </div>
+                            <p class="search-ready__assign">Assigned</p>
+                        </div>
+                    </div>
+                    {* <div class="search-ready__notcf">
+                        <img src="https://i.imgur.com/QBVp9RA.png" />
+                        <span>Order not confirmed within 6 mins</span>
+                    </div> *}
+                </li>
+            
+            </ul>
+        </div>
+        <div class="have-ready__content">
+            <div class="have-ready__mid">
+                <div class="have-ready__mid--rel" data-order="order9161">
+                    <div class="search-ready__box search-ready__box--mid">
+                        <div class="search-ready__left">
+                            <h3 class="search-ready__id search-ready__id--bold search-ready__id--packing">
+                                #78395909162<span class="search-ready__new search-ready__new--packing">Ready</span>
+                            </h3>
+                            <p class="search-ready__desc search-ready__desc--gray">1 items for #127</p>
+                            
+                        </div>
+                        <div class="search-ready__right">
+                            
+                            <img class="search-ready__print" src="https://i.imgur.com/q6OYhBH.png" />
+                            
+                            <p class="search-ready__date">21 Jul 2020 02:08 PM</p>
+                        </div>
+                    </div>
+                    <ul class="search-ready__list-details">
+                        <li class="search-ready__details">
+                            <div class="search-ready__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-ready__dish">
+                                    <p class="search-ready__title">Chicken Biryani</p>
+                                    <p class="search-ready__type">Biryani</p>
+                                    <p class="search-ready__price">$150</p>
+                                </div>
+                            </div>
+                            <div class="search-ready__details--right">
+                                <p class="search-ready__amount">X1</p>
+                            </div>
+                        </li>
+                        <li class="search-ready__details">
+                            <div class="search-ready__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-ready__dish">
+                                    <p class="search-ready__title">Chicken Biryani</p>
+                                    <p class="search-ready__type">Biryani</p>
+                                    <p class="search-ready__price">$150</p>
+                                </div>
+                            </div>
+                            <div class="search-ready__details--right">
+                                <p class="search-ready__amount">X1</p>
+                            </div>
+                        </li>
+                        <li class="search-ready__details">
+                            <div class="search-ready__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-ready__dish">
+                                    <p class="search-ready__title">Chicken Biryani</p>
+                                    <p class="search-ready__type">Biryani</p>
+                                    <p class="search-ready__price">$150</p>
+                                </div>
+                            </div>
+                            <div class="search-ready__details--right">
+                                <p class="search-ready__amount">X1</p>
+                            </div>
+                        </li>
+                        
+                    </ul>
+
+                
+                    {* <div class="search-ready__buttons">
+                        <input type="button" class="search-ready__buttons--btn search-ready__buttons--packing" value="Mark order packed" />
+                    </div> *}
+                </div>
+                <div class="have-ready__mid--rel" data-order="order9162">
+                    <div class="search-ready__box search-ready__box--mid">
+                        <div class="search-ready__left">
+                            <h3 class="search-ready__id search-ready__id--bold search-ready__id--packing">
+                                #78395909162<span class="search-ready__new search-ready__new--packing">Ready</span>
+                            </h3>
+                            <p class="search-ready__desc search-ready__desc--gray">1 items for #127</p>
+                            
+                        </div>
+                        <div class="search-ready__right">
+                            
+                            <img class="search-ready__print" src="https://i.imgur.com/q6OYhBH.png" />
+                            
+                            <p class="search-ready__date">21 Jul 2020 02:08 PM</p>
+                        </div>
+                    </div>
+                    <ul class="search-ready__list-details">
+                        <li class="search-ready__details">
+                            <div class="search-ready__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-ready__dish">
+                                    <p class="search-ready__title">Chicken Biryani</p>
+                                    <p class="search-ready__type">Biryani</p>
+                                    <p class="search-ready__price">$120</p>
+                                </div>
+                            </div>
+                            <div class="search-ready__details--right">
+                                <p class="search-ready__amount">X1</p>
+                            </div>
+                        </li>
+                        <li class="search-ready__details">
+                            <div class="search-ready__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-ready__dish">
+                                    <p class="search-ready__title">Chicken Biryani</p>
+                                    <p class="search-ready__type">Biryani</p>
+                                    <p class="search-ready__price">$120</p>
+                                </div>
+                            </div>
+                            <div class="search-ready__details--right">
+                                <p class="search-ready__amount">X2</p>
+                            </div>
+                        </li>
+                        <li class="search-ready__details">
+                            <div class="search-ready__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-ready__dish">
+                                    <p class="search-ready__title">Chicken Biryani</p>
+                                    <p class="search-ready__type">Biryani</p>
+                                    <p class="search-ready__price">$180</p>
+                                </div>
+                            </div>
+                            <div class="search-ready__details--right">
+                                <p class="search-ready__amount">X1</p>
+                            </div>
+                        </li>
+                        
+                    </ul>
+
+                
+                    {* <div class="search-ready__buttons">
+                        <input type="button" class="search-ready__buttons--btn search-ready__buttons--packing" value="Mark order packed" />
+                    </div> *}
+                </div>
+            
+            </div>
+            <div class="have-ready__right">
+                <div class="search-ready__right-top" data-order="order9161">
+                    {* <div class="search-ready__right-box">
+                        <div class="search-ready__img-box search-ready__img-box--big">
+                            <img src="https://i.imgur.com/CYDfvhi.png" />
+                        </div>
+                        <div class="search-ready__right-content">
+                            <h4 class="search-ready__right-title">
+                                Packing Time
+                            </h4>
+                            <p class="search-ready__right-time">
+                                10 mins remaning
+                            </p>
+                            <p class="search-ready__right-status">
+                                Packin started
+                            </p>
+                        </div>
+                    </div> *}
+                    
+                    <div class="search-ready__right-box">
+                        <div class="search-ready__img-box search-ready__img-box--big">
+                            <img src="https://i.imgur.com/UKWKNWg.png" />
+                        </div>
+                        <div class="search-ready__right-content">
+                            <h4 class="search-ready__right-title">
+                                Delivery Executive
+                            </h4>
+                            {* <p class="search-ready__right-assign">
+                                Pending assignent...
+                            </p> *}
+                            <p class="search-ready__right-person">
+                                Utpal Choudhury
+                            </p>
+                            <p class="search-ready__right-phone">
+                                <img src="https://i.imgur.com/xbHY2sf.png"><span class="search-ready__right-first-num">+91</span><span>5647867875</span>
+                            </p>
+                            <div class="search-ready__right-pickup">
+                                <p class="search-ready__right-pickup-text">Pick up arriving in</p>
+                                <div>Spin</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="search-ready__right-box">
+                        <div class="search-ready__img-box search-ready__img-box--big">
+                            <img src="https://i.imgur.com/OFK8M5L.png" />
+                        </div>
+                        <div class="search-ready__right-content">
+                            <h4 class="search-ready__right-title">
+                                Grand Total
+                            </h4>
+                            <p class="search-ready__right-price">
+                                $122
+                            </p>
+                            <div class="search-ready__right-info">
+                                <div class="search-ready__right-row">
+                                    <p class="search-ready__right-label">Item total</p>
+                                    <p class="search-ready__right-money">$122</p>
+                                </div>
+                                <div class="search-ready__right-row">
+                                    <p class="search-ready__right-label">GST</p>
+                                    <p class="search-ready__right-money">$0</p>
+                                </div>
+                                <div class="search-ready__right-row">
+                                    <p class="search-ready__right-label">Discount</p>
+                                    <p class="search-ready__right-money">$30</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="search-ready__right-box">
+                        <a class="search-ready__link" href="javascript:void(0)">Need help with this order?</a>
+                    </div>
+                </div>
+                <div class="search-ready__right-top" data-order="order9162">
+                    {* <div class="search-ready__right-box">
+                        <div class="search-ready__img-box search-ready__img-box--big">
+                            <img src="https://i.imgur.com/CYDfvhi.png" />
+                        </div>
+                        <div class="search-ready__right-content">
+                            <h4 class="search-ready__right-title">
+                                Packing Time
+                            </h4>
+                            <p class="search-ready__right-time">
+                                15 mins remaning
+                            </p>
+                            <p class="search-ready__right-status">
+                                Packin started
+                            </p>
+                        </div>
+                    </div> *}
+                    
+                    <div class="search-ready__right-box">
+                        <div class="search-ready__img-box search-ready__img-box--big">
+                            <img src="https://i.imgur.com/UKWKNWg.png" />
+                        </div>
+                        <div class="search-ready__right-content">
+                            <h4 class="search-ready__right-title">
+                                Delivery Executive
+                            </h4>
+                            <p class="search-ready__right-person">
+                                Utpal Choudhury
+                            </p>
+                            <p class="search-ready__right-phone">
+                                <img src="https://i.imgur.com/xbHY2sf.png"><span class="search-ready__right-first-num">+91</span><span>5647867875</span>
+                            </p>
+                            <div class="search-ready__right-pickup">
+                                <p class="search-ready__right-pickup-text">Pick up arriving in</p>
+                                <div>Spin</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="search-ready__right-box">
+                        <div class="search-ready__img-box search-ready__img-box--big">
+                            <img src="https://i.imgur.com/OFK8M5L.png" />
+                        </div>
+                        <div class="search-ready__right-content">
+                            <h4 class="search-ready__right-title">
+                                Grand Total
+                            </h4>
+                            <p class="search-ready__right-price">
+                                $188
+                            </p>
+                            <div class="search-ready__right-info">
+                                <div class="search-ready__right-row">
+                                    <p class="search-ready__right-label">Item total</p>
+                                    <p class="search-ready__right-money">$188</p>
+                                </div>
+                                <div class="search-ready__right-row">
+                                    <p class="search-ready__right-label">GST</p>
+                                    <p class="search-ready__right-money">$0</p>
+                                </div>
+                                <div class="search-ready__right-row">
+                                    <p class="search-ready__right-label">Discount</p>
+                                    <p class="search-ready__right-money">$30</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="search-ready__right-box">
+                        <a class="search-ready__link" href="javascript:void(0)">Need help with this order?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- past -->
+    <div class="have-tab have-past" id="past" data-tab="tab4">
+        <div class="have-past__left search-past" >
+            <div class="search-past__box-input">
+            {* <i class="icon-search"></i> *}
+            <input class="search-past__input" type="search" placeholder="Search">
+            </div>
+            <ul class="search-past__list">
+                <li class="search-past__box search-past__box--column search-past__box--nopd" data-order="order9161">
+                    <div class="search-past__container">
+                        <div class="search-past__left">
+                            <h3 class="search-past__id search-past__id--delevered">
+                                9161
+                            </h3>
+                            <p class="search-past__desc">1 items for #127</p>
+                            <p class="search-past__time">Received a minute ago</p>
+                        </div>
+                        <div class="search-past__right">
+                            <div class="search-past__img-box">
+                                <img src="https://i.imgur.com/tOnmHoj.png" />
+                            </div>
+                            <p class="search-past__assign">Delevered</p>
+                        </div>
+                    </div>
+                    <div class="search-past__notcf">
+                        <img src="https://i.imgur.com/tYGS0xL.png" />
+                        <span class="search-past__notcf--past">Order packing correct</span>
+                    </div>
+                </li>
+                <li class="search-past__box search-past__box--column search-past__box--nopd" data-order="order9162">
+                    <div class="search-past__container">
+                        <div class="search-past__left">
+                            <h3 class="search-past__id search-past__id--delevered">
+                                9162
+                            </h3>
+                            <p class="search-past__desc">1 items for #127</p>
+                            <p class="search-past__time">Received a minute ago</p>
+                        </div>
+                        <div class="search-past__right">
+                            <div class="search-past__img-box">
+                                <img src="https://i.imgur.com/UKWKNWg.png" />
+                            </div>
+                            <p class="search-past__assign">Out for delivery</p>
+                        </div>
+                    </div>
+                    <div class="search-past__notcf">
+                        <img src="https://i.imgur.com/tYGS0xL.png" />
+                        <span class="search-past__notcf--past">Order packing correct</span>
+                    </div>
+                </li>
+                <li class="search-past__box search-past__box--column search-past__box--nopd" data-order="order9163">
+                    <div class="search-past__container">
+                        <div class="search-past__left">
+                            <h3 class="search-past__id search-past__id--delevered">
+                                9163
+                            </h3>
+                            <p class="search-past__desc">1 items for #127</p>
+                            <p class="search-past__time">Received a minute ago</p>
+                        </div>
+                        <div class="search-past__right">
+                            <div class="search-past__img-box">
+                                <img src="https://i.imgur.com/KtN88Ni.png" />
+                            </div>
+                            <p class="search-past__assign">Cancelled</p>
+                        </div>
+                    </div>
+                    <div class="search-past__notcf">
+                        <img src="https://i.imgur.com/QBVp9RA.png" />
+                        <span>Food ready not pressed</span>
+                    </div>
+                </li>
+            
+            </ul>
+        </div>
+        <div class="have-past__content">
+            <div class="have-past__mid">
+                <div class="have-past__mid--rel" data-order="order9161">
+                    <div class="search-past__box search-past__box--mid search-past__box--nomg">
+                        <div class="search-past__left">
+                            <h3 class="search-past__id search-past__id--bold search-past__id--packing">
+                                #78395909161<span class="search-past__new search-past__new--packing">Delivered</span>
+                            </h3>
+                            <p class="search-past__desc search-past__desc--gray">1 items for #127</p>
+                            
+                        </div>
+                        <div class="search-past__right">
+                            
+                            <img class="search-past__print" src="https://i.imgur.com/q6OYhBH.png" />
+                            
+                            <p class="search-past__date">21 Jul 2020 02:08 PM</p>
+                        </div>
+                    </div>
+                    <div class="search-past__box-time">
+                        <div class="search-past__box-time-list">
+                            <img src="https://i.imgur.com/1Tyk2hG.png" />
+                            <div class="search-past__box-time-hour">
+                                <p class="search-past__box-time-h">02:08 PM</p>
+                                <p class="search-past__box-time-p">Placed</p>
+                            </div>
+                        </div>
+                        <div class="search-past__box-time-list">
+                            <img src="https://i.imgur.com/1Tyk2hG.png" />
+                            <div class="search-past__box-time-hour">
+                                <p  class="search-past__box-time-h">02:20 PM</p>
+                                <p class="search-past__box-time-p">Confirmed</p>
+                            </div>
+                        </div>
+                        <div class="search-past__box-time-list">
+                            <img src="https://i.imgur.com/1Tyk2hG.png" />
+                            <div class="search-past__box-time-hour">
+                                <p  class="search-past__box-time-h">02:20 PM</p>
+                                <p class="search-past__box-time-p">Packed</p>
+                            </div>
+                        </div>
+                        <div class="search-past__box-time-list">
+                            <img src="https://i.imgur.com/1Tyk2hG.png" />
+                            <div class="search-past__box-time-hour">
+                                <p  class="search-past__box-time-h">02:20 PM</p>
+                                <p class="search-past__box-time-p">Delivered</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="search-past__list-details">
+                        <li class="search-past__details">
+                            <div class="search-past__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-past__dish">
+                                    <p class="search-past__title">Chicken Biryani</p>
+                                    <p class="search-past__type">Biryani</p>
+                                    <p class="search-past__price">$150</p>
+                                </div>
+                            </div>
+                            <div class="search-past__details--right">
+                                <p class="search-past__amount">X1</p>
+                            </div>
+                        </li>
+                        <li class="search-past__details">
+                            <div class="search-past__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-past__dish">
+                                    <p class="search-past__title">Chicken Biryani</p>
+                                    <p class="search-past__type">Biryani</p>
+                                    <p class="search-past__price">$150</p>
+                                </div>
+                            </div>
+                            <div class="search-past__details--right">
+                                <p class="search-past__amount">X1</p>
+                            </div>
+                        </li>
+                        <li class="search-past__details">
+                            <div class="search-past__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-past__dish">
+                                    <p class="search-past__title">Chicken Biryani</p>
+                                    <p class="search-past__type">Biryani</p>
+                                    <p class="search-past__price">$150</p>
+                                </div>
+                            </div>
+                            <div class="search-past__details--right">
+                                <p class="search-past__amount">X1</p>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="have-past__mid--rel" data-order="order9162">
+                    <div class="search-past__box search-past__box--mid search-past__box--nomg">
+                        <div class="search-past__left">
+                            <h3 class="search-past__id search-past__id--bold search-past__id--delevered">
+                                #78395909162<span class="search-past__new search-past__new--delevered">Out for delivery</span>
+                            </h3>
+                            <p class="search-past__desc search-past__desc--gray">1 items for #127</p>
+                            
+                        </div>
+                        <div class="search-past__right">
+                            
+                            <img class="search-past__print" src="https://i.imgur.com/q6OYhBH.png" />
+                            
+                            <p class="search-past__date">21 Jul 2020 02:08 PM</p>
+                        </div>
+                    </div>
+                    <div class="search-past__box-time">
+                        <div class="search-past__box-time-list">
+                            <img src="https://i.imgur.com/1Tyk2hG.png" />
+                            <div class="search-past__box-time-hour">
+                                <p  class="search-past__box-time-h">02:08 PM</p>
+                                <p class="search-past__box-time-p">Placed</p>
+                            </div>
+                        </div>
+                        <div class="search-past__box-time-list">
+                            <img src="https://i.imgur.com/1Tyk2hG.png" />
+                            <div class="search-past__box-time-hour">
+                                <p  class="search-past__box-time-h">02:20 PM</p>
+                                <p class="search-past__box-time-p">Confirmed</p>
+                            </div>
+                        </div>
+                        <div class="search-past__box-time-list">
+                            <img src="https://i.imgur.com/1Tyk2hG.png" />
+                            <div class="search-past__box-time-hour">
+                                <p  class="search-past__box-time-h">02:20 PM</p>
+                                <p class="search-past__box-time-p">Packed</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <ul class="search-past__list-details">
+                        <li class="search-past__details">
+                            <div class="search-past__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-past__dish">
+                                    <p class="search-past__title">Chicken Biryani</p>
+                                    <p class="search-past__type">Biryani</p>
+                                    <p class="search-past__price">$120</p>
+                                </div>
+                            </div>
+                            <div class="search-past__details--right">
+                                <p class="search-past__amount">X1</p>
+                            </div>
+                        </li>
+                        <li class="search-past__details">
+                            <div class="search-past__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-past__dish">
+                                    <p class="search-past__title">Chicken Biryani</p>
+                                    <p class="search-past__type">Biryani</p>
+                                    <p class="search-past__price">$120</p>
+                                </div>
+                            </div>
+                            <div class="search-past__details--right">
+                                <p class="search-past__amount">X2</p>
+                            </div>
+                        </li>
+                        <li class="search-past__details">
+                            <div class="search-past__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-past__dish">
+                                    <p class="search-past__title">Chicken Biryani</p>
+                                    <p class="search-past__type">Biryani</p>
+                                    <p class="search-past__price">$180</p>
+                                </div>
+                            </div>
+                            <div class="search-past__details--right">
+                                <p class="search-past__amount">X1</p>
+                            </div>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+
+                 <div class="have-past__mid--rel" data-order="order9163">
+                    <div class="search-past__box search-past__box--mid search-past__box--nomg">
+                        <div class="search-past__left">
+                            <h3 class="search-past__id search-past__id--bold search-past__id--delevered">
+                                #78395909163<span class="search-past__new search-past__new--delevered">Cancelled</span>
+                            </h3>
+                            <p class="search-past__desc search-past__desc--gray">1 items for #127</p>
+                            
+                        </div>
+                        <div class="search-past__right">
+                            
+                            <img class="search-past__print" src="https://i.imgur.com/q6OYhBH.png" />
+                            
+                            <p class="search-past__date">21 Jul 2020 02:08 PM</p>
+                        </div>
+                    </div>
+                    <div class="search-past__box-time">
+                        <div class="search-past__box-time-list">
+                            <img src="https://i.imgur.com/1Tyk2hG.png" />
+                            <div class="search-past__box-time-hour">
+                                <p  class="search-past__box-time-h">02:08 PM</p>
+                                <p class="search-past__box-time-p">Placed</p>
+                            </div>
+                        </div>
+                        <div class="search-past__box-time-list">
+                            <img src="https://i.imgur.com/1Tyk2hG.png" />
+                            <div class="search-past__box-time-hour">
+                                <p  class="search-past__box-time-h">02:20 PM</p>
+                                <p class="search-past__box-time-p">Canceled</p>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <ul class="search-past__list-details">
+                        <li class="search-past__details">
+                            <div class="search-past__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-past__dish">
+                                    <p class="search-past__title">Chicken Biryani</p>
+                                    <p class="search-past__type">Biryani</p>
+                                    <p class="search-past__price">$120</p>
+                                </div>
+                            </div>
+                            <div class="search-past__details--right">
+                                <p class="search-past__amount">X1</p>
+                            </div>
+                        </li>
+                        <li class="search-past__details">
+                            <div class="search-past__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-past__dish">
+                                    <p class="search-past__title">Chicken Biryani</p>
+                                    <p class="search-past__type">Biryani</p>
+                                    <p class="search-past__price">$120</p>
+                                </div>
+                            </div>
+                            <div class="search-past__details--right">
+                                <p class="search-past__amount">X2</p>
+                            </div>
+                        </li>
+                        <li class="search-past__details">
+                            <div class="search-past__details--left">
+                                <img src="https://i.imgur.com/76y9dFM.png" />
+                                <div class="search-past__dish">
+                                    <p class="search-past__title">Chicken Biryani</p>
+                                    <p class="search-past__type">Biryani</p>
+                                    <p class="search-past__price">$180</p>
+                                </div>
+                            </div>
+                            <div class="search-past__details--right">
+                                <p class="search-past__amount">X1</p>
+                            </div>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+            
+            </div>
+            <div class="have-past__right">
+                <div class="search-past__right-top" data-order="order9161">
+
+                    <div class="search-past__right-box">
+                        <div class="search-past__img-box search-past__img-box--big">
+                            <img src="https://i.imgur.com/OFK8M5L.png" />
+                        </div>
+                        <div class="search-past__right-content">
+                            <h4 class="search-past__right-title">
+                                Grand Total
+                            </h4>
+                            <p class="search-past__right-price">
+                                $122
+                            </p>
+                            <div class="search-past__right-info">
+                                <div class="search-past__right-row">
+                                    <p class="search-past__right-label">Item total</p>
+                                    <p class="search-past__right-money">$122</p>
+                                </div>
+                                <div class="search-past__right-row">
+                                    <p class="search-past__right-label">GST</p>
+                                    <p class="search-past__right-money">$0</p>
+                                </div>
+                                <div class="search-past__right-row">
+                                    <p class="search-past__right-label">Discount</p>
+                                    <p class="search-past__right-money">$30</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="search-past__right-top" data-order="order9162">
+                    <div class="search-past__right-box">
+                        <div class="search-past__img-box search-past__img-box--big">
+                            <img src="https://i.imgur.com/OFK8M5L.png" />
+                        </div>
+                        <div class="search-past__right-content">
+                            <h4 class="search-past__right-title">
+                                Grand Total
+                            </h4>
+                            <p class="search-past__right-price">
+                                $158
+                            </p>
+                            <div class="search-past__right-info">
+                                <div class="search-past__right-row">
+                                    <p class="search-past__right-label">Item total</p>
+                                    <p class="search-past__right-money">$158</p>
+                                </div>
+                                <div class="search-past__right-row">
+                                    <p class="search-past__right-label">GST</p>
+                                    <p class="search-past__right-money">$0</p>
+                                </div>
+                                <div class="search-past__right-row">
+                                    <p class="search-past__right-label">Discount</p>
+                                    <p class="search-past__right-money">$30</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                   
+                </div>
+
+                 <div class="search-past__right-top" data-order="order9163">
+
+                    <div class="search-past__right-box">
+                        <div class="search-past__img-box search-past__img-box--big">
+                            <img src="https://i.imgur.com/OFK8M5L.png" />
+                        </div>
+                        <div class="search-past__right-content">
+                            <h4 class="search-past__right-title">
+                                Grand Total
+                            </h4>
+                            <p class="search-past__right-price">
+                                $111
+                            </p>
+                            <div class="search-past__right-info">
+                                <div class="search-past__right-row">
+                                    <p class="search-past__right-label">Item total</p>
+                                    <p class="search-past__right-money">$111</p>
+                                </div>
+                                <div class="search-past__right-row">
+                                    <p class="search-past__right-label">GST</p>
+                                    <p class="search-past__right-money">$0</p>
+                                </div>
+                                <div class="search-past__right-row">
+                                    <p class="search-past__right-label">Discount</p>
+                                    <p class="search-past__right-money">$11</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </div>
-
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="showStork" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
@@ -851,6 +1626,8 @@
     </div>
   </div>
 </div>
+
+
 
 {else}
     {* stork edit *}
@@ -951,10 +1728,52 @@
     selected_storefront_id=$selected_storefront_id
 }
 
+{* make tab *}
+<script>
+
+    document.querySelector('.tab__li[data-tab=tab1]').classList.add('active');
+    document.querySelector('.have-tab[data-tab=tab1]').classList.add('activeTab');
+
+    let tabs = {
+    list: document.querySelector('ul.nav-tabs'),
+    all: document.querySelectorAll('.nav-tabs .tab__li'),
+
+    },
+    tabsContent = {
+        container: document.querySelector('.have-content'),
+        current: null,
+        tab: null,
+    }
+
+    console.log("tabs list: ",tabs.list, "all: ",tabs.all);
+    console.log("tabs container: ",tabsContent.container, "current: ",tabsContent.current, "tab: ",tabsContent.tab);
+    
+
+    tabs.all.forEach(f => {
+    f.addEventListener('mousedown', () => {
+        f.classList.contains('activeTab') || setAciveTabs(f);
+        console.log("func: ",f)
+         console.log("tabs list: ",tabs.list, "all: ",tabs.all);
+        console.log("tabs container: ",tabsContent.container, "current tab: ",tabsContent.current, "tab: ",tabsContent.tab);
+    })
+    });
+
+    function setAciveTabs(f) {
+        tabs.list.querySelector('.active').classList.remove('active')
+        f.classList.add('active')
+        
+        tabsContent.current = tabsContent.container.querySelector('.activeTab')
+        tabsContent.tab = f.getAttribute('data-tab')
+        tabsContent.current.classList.remove('activeTab')
+        tabsContent.container.querySelector('[data-tab="' + tabsContent.tab + '"]').classList.add('activeTab')
+    
+    }
 
 
+</script>
 
-{* tab *}
+
+{* new order *}
 <script>
     document.querySelector('.search-order__box[data-order=order9161]').classList.add('active')
     document.querySelector('.have-order__mid--rel[data-order=order9161]').classList.add('active')
@@ -968,24 +1787,23 @@
     ordersContent = {
         container: document.querySelector('.have-order .have-order__mid'),
         current: null,
-        person: null,
+        order: null,
     },
     detailContent = {
         container: document.querySelector('.have-order .have-order__right'),
         current: null,
-        person: null,
+        order: null,
     }
 
-    console.log("list: ",orders.list, "all: ",orders.all);
-    console.log("ordersContent: ",ordersContent.container, "current: ",ordersContent.current, "person: ",ordersContent.person);
-    console.log("detailContent: ",detailContent.container, "current: ",detailContent.current, "person: ",detailContent.person);
+  console.log("list: ",orders.list, "all: ",orders.all);
+    console.log("ordersContent: ",ordersContent.container, "current: ",ordersContent.current, "order: ",ordersContent.order);
+    console.log("detailContent: ",detailContent.container, "current: ",detailContent.current, "order: ",detailContent.order);
 
     orders.all.forEach(f => {
     f.addEventListener('mousedown', () => {
-         console.log('abc')
+        
         f.classList.contains('active') || setAciveChat(f);
-        console.log(f)
-        console.log('axx')
+   
     })
     });
 
@@ -994,18 +1812,20 @@
         f.classList.add('active')
         
         ordersContent.current = ordersContent.container.querySelector('.active')
-        ordersContent.person = f.getAttribute('data-order')
+        ordersContent.order = f.getAttribute('data-order')
         ordersContent.current.classList.remove('active')
-        ordersContent.container.querySelector('[data-order="' + ordersContent.person + '"]').classList.add('active')
+        ordersContent.container.querySelector('[data-order="' + ordersContent.order + '"]').classList.add('active')
 
         detailContent.current = detailContent.container.querySelector('.active')
-        detailContent.person = f.getAttribute('data-order')
+        detailContent.order = f.getAttribute('data-order')
         detailContent.current.classList.remove('active')
-        detailContent.container.querySelector('[data-order="' + detailContent.person + '"]').classList.add('active')
+        detailContent.container.querySelector('[data-order="' + detailContent.order + '"]').classList.add('active')
     
     }
 
 </script>
+
+{* packing *}
 
 <script>
     document.querySelector('.search-packing__box[data-order=order9161]').classList.add('active')
@@ -1020,18 +1840,18 @@
     packingsContent = {
         container: document.querySelector('.have-packing .have-packing__mid'),
         current: null,
-        person: null,
+        packing: null,
     },
     detailPacking = {
         container: document.querySelector('.have-packing .have-packing__right'),
         current: null,
-        person: null,
+        packing: null,
     }
 
-    console.log("list: ",packings.list, "all: ",packings.all);
-    console.log("ordersContent: ",packingsContent.container, "current: ",packingsContent.current, "person: ",packingsContent.person);
-    console.log("detailContent: ",detailPacking.container, "current: ",detailPacking.current, "person: ",detailPacking.person);
-
+    /*console.log("list: ",packings.list, "all: ",packings.all);
+    console.log("ordersContent: ",packingsContent.container, "current: ",packingsContent.current, "packing: ",packingsContent.packing);
+    console.log("detailContent: ",detailPacking.container, "current: ",detailPacking.current, "packing: ",detailPacking.packing);
+*/
     packings.all.forEach(f => {
     f.addEventListener('mousedown', () => {
          console.log('abc')
@@ -1046,24 +1866,150 @@
         f.classList.add('active')
         
         packingsContent.current = packingsContent.container.querySelector('.active')
-        packingsContent.person = f.getAttribute('data-order')
+        packingsContent.packing = f.getAttribute('data-order')
         packingsContent.current.classList.remove('active')
-        packingsContent.container.querySelector('[data-order="' + packingsContent.person + '"]').classList.add('active')
+        packingsContent.container.querySelector('[data-order="' + packingsContent.packing + '"]').classList.add('active')
 
         detailPacking.current = detailPacking.container.querySelector('.active')
-        detailPacking.person = f.getAttribute('data-order')
+        detailPacking.packing = f.getAttribute('data-order')
         detailPacking.current.classList.remove('active')
-        detailPacking.container.querySelector('[data-order="' + detailPacking.person + '"]').classList.add('active')
+        detailPacking.container.querySelector('[data-order="' + detailPacking.packing + '"]').classList.add('active')
     
     }
 
 </script>
 
 <script>
+
     function openPacking() {
+        
         console.log('open packing')
         document.getElementById("new").style.display="none";
         document.getElementById("packing").style.display="flex";
+
+    }
+</script>
+
+{* ready *}
+<script>
+    document.querySelector('.search-ready__box[data-order=order9161]').classList.add('active')
+    document.querySelector('.have-ready__mid--rel[data-order=order9161]').classList.add('active')
+    document.querySelector('.search-ready__right-top[data-order=order9161]').classList.add('active')
+
+    let readys = {
+    list: document.querySelector('ul.search-ready__list'),
+    all: document.querySelectorAll('.search-ready .search-ready__box'),
+
+    },
+    readysContent = {
+        container: document.querySelector('.have-ready .have-ready__mid'),
+        current: null,
+        ready: null,
+    },
+    detailReadys = {
+        container: document.querySelector('.have-ready .have-ready__right'),
+        current: null,
+        ready: null,
+    }
+/*
+    console.log("readys: ",readys.list, "all: ",readys.all);
+    console.log("ordersContent: ",readysContent.container, "current: ",readysContent.current, "ready: ",readysContent.ready);
+    console.log("detailContent: ",detailReadys.container, "current: ",detailReadys.current, "ready: ",detailReadys.ready);
+*/
+    readys.all.forEach(f => {
+    f.addEventListener('mousedown', () => {
+         console.log('abc')
+        f.classList.contains('active') || setAciveReady(f);
+        console.log(f)
+        console.log('axx')
+    })
+    });
+
+    function setAciveReady(f) {
+        readys.list.querySelector('.active').classList.remove('active')
+        f.classList.add('active')
+        
+        readysContent.current = readysContent.container.querySelector('.active')
+        readysContent.ready = f.getAttribute('data-order')
+        readysContent.current.classList.remove('active')
+        readysContent.container.querySelector('[data-order="' + readysContent.ready + '"]').classList.add('active')
+
+        detailReadys.current = detailReadys.container.querySelector('.active')
+        detailReadys.ready = f.getAttribute('data-order')
+        detailReadys.current.classList.remove('active')
+        detailReadys.container.querySelector('[data-order="' + detailReadys.ready + '"]').classList.add('active')
+    
+    }
+
+</script>
+
+<script>
+    function openReady() {
+        console.log('open ready')
+        document.getElementById("packing").style.display="none";
+        document.getElementById("ready").style.display="flex";
+
+    }
+</script>
+
+{* past *}
+<script>
+    document.querySelector('.search-past__box[data-order=order9161]').classList.add('active')
+    document.querySelector('.have-past__mid--rel[data-order=order9161]').classList.add('active')
+    document.querySelector('.search-past__right-top[data-order=order9161]').classList.add('active')
+
+    let pasts = {
+    list: document.querySelector('ul.search-past__list'),
+    all: document.querySelectorAll('.search-past .search-past__box'),
+
+    },
+    pastsContent = {
+        container: document.querySelector('.have-past .have-past__mid'),
+        current: null,
+        past: null,
+    },
+    detailPasts = {
+        container: document.querySelector('.have-past .have-past__right'),
+        current: null,
+        past: null,
+    }
+/*
+    console.log("readys: ",readys.list, "all: ",readys.all);
+    console.log("ordersContent: ",readysContent.container, "current: ",readysContent.current, "ready: ",readysContent.ready);
+    console.log("detailContent: ",detailReadys.container, "current: ",detailReadys.current, "ready: ",detailReadys.ready);
+*/
+    pasts.all.forEach(f => {
+    f.addEventListener('mousedown', () => {
+         console.log('abc')
+        f.classList.contains('active') || setAcivePast(f);
+        console.log(f)
+        console.log('axx')
+    })
+    });
+
+    function setAcivePast(f) {
+        pasts.list.querySelector('.active').classList.remove('active')
+        f.classList.add('active')
+        
+        pastsContent.current = pastsContent.container.querySelector('.active')
+        pastsContent.past = f.getAttribute('data-order')
+        pastsContent.current.classList.remove('active')
+        pastsContent.container.querySelector('[data-order="' + pastsContent.past + '"]').classList.add('active')
+
+        detailPasts.current = detailPasts.container.querySelector('.active')
+        detailPasts.past = f.getAttribute('data-order')
+        detailPasts.current.classList.remove('active')
+        detailPasts.container.querySelector('[data-order="' + detailPasts.past + '"]').classList.add('active')
+    
+    }
+
+</script>
+
+<script>
+    function openPast() {
+        console.log('open ready')
+        document.getElementById("ready").style.display="none";
+        document.getElementById("past").style.display="flex";
 
     }
 </script>
